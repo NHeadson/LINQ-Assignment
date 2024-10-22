@@ -2,10 +2,8 @@
 
 // deserialize mario json from file into List<Mario>
 List<Character> dks = JsonSerializer.Deserialize<List<Character>>(File.ReadAllText("dk.json"))!;
-
 // deserialize mario json from file into List<Mario>
 List<Character> marios = JsonSerializer.Deserialize<List<Character>>(File.ReadAllText("mario.json"))!;
-
 // combine all characters into 1 list
 List<Character> characters = [];
 characters.AddRange(dks);
@@ -25,7 +23,12 @@ Console.Clear();
 //   Console.WriteLine(character.Display());
 // }
 // display every character except the first 5
-foreach(Character character in characters.Skip(5))
+// foreach(Character character in characters.Skip(5))
+// {
+//   Console.WriteLine(character.Display());
+// }
+// display characters 6-10
+foreach(Character character in characters.Skip(5).Take(5))
 {
   Console.WriteLine(character.Display());
 }
