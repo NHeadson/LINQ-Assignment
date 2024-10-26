@@ -137,8 +137,17 @@ Console.Clear();
 // Console.WriteLine($"Are there any characters with no alias: {NoAlias}");
 
 // 10) How many character(s) with no alias (all series)?
-int NoAliasCount = characters.Count(c => c.Alias.Count() == 0);
-Console.WriteLine($"There are {NoAliasCount} characters with no alias");
+// int NoAliasCount = characters.Count(c => c.Alias.Count() == 0);
+// Console.WriteLine($"There are {NoAliasCount} characters with no alias");
+
+// 11) List the character(s) with no alias (all series) - return character name, alias and series only
+foreach(Character character in characters.Where(c => c.Alias.Count() == 0))
+{
+  Console.WriteLine($"{character.Name} - {string.Join(", ", character.Series)}");
+}
+
+
+
 
 
 
