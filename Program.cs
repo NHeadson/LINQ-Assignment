@@ -103,8 +103,14 @@ Console.Clear();
 // }
 
 // 3) How many character(s) were created in 1981 (Mario series)?
-var MarioCount1981 = characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario")).Count();
-Console.WriteLine($"There were {MarioCount1981} characters created in 1981 in the Mario series");
+// var MarioCount1981 = characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario")).Count();
+// Console.WriteLine($"There were {MarioCount1981} characters created in 1981 in the Mario series");
+
+// 4) [1.19d] List the character(s) created in that 1981 (Mario series) - return character name only.
+foreach(Character character in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario")))
+{
+  Console.WriteLine($"{character.Name}");
+}
 
 
 
