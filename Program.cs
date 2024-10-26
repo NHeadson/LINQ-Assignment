@@ -97,10 +97,14 @@ Console.Clear();
 // Console.WriteLine($"There were {CharacterCount1981} characters created in 1981");
 
 // 2) List the character(s) created in that 1981 (all series) - return character name and series only.
-foreach(Character character in characters.Where(c => c.YearCreated == 1981))
-{
-  Console.WriteLine($"{character.Name} - {string.Join(", ", character.Series)}");
-}
+// foreach(Character character in characters.Where(c => c.YearCreated == 1981))
+// {
+//   Console.WriteLine($"{character.Name} - {string.Join(", ", character.Series)}");
+// }
+
+// 3) How many character(s) were created in 1981 (Mario series)?
+var MarioCount1981 = characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario")).Count();
+Console.WriteLine($"There were {MarioCount1981} characters created in 1981 in the Mario series");
 
 
 
