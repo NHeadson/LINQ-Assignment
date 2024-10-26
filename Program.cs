@@ -195,8 +195,13 @@ Console.Clear();
 // }
 
 // 22) How many character(s) have a species of Kremling?
-int KremlingCount = characters.Count(c => c.Species == "Kremling");
-Console.WriteLine($"There are {KremlingCount} characters with the species Kremling");
+// int KremlingCount = characters.Count(c => c.Species == "Kremling");
+// Console.WriteLine($"There are {KremlingCount} characters with the species Kremling");
 
+// 23) List the character(s) that have a species of Kremling - return character name only.
+foreach(Character character in characters.Where(c => c.Species == "Kremling"))
+{
+  Console.WriteLine($"{character.Name}");
+}
 
 
