@@ -81,11 +81,22 @@ Console.Clear();
 //   Console.WriteLine($"\t{name}");
 // }
 // all characters grouped by year created
-var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
-foreach(var characterByYearCreated in CharactersByYearCreated)
-{
-  Console.WriteLine(characterByYearCreated.Key);
-  foreach(var character in characterByYearCreated) {
-    Console.WriteLine($"\t{character.Name}");
-  }
-}
+// var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
+// foreach(var characterByYearCreated in CharactersByYearCreated)
+// {
+//   Console.WriteLine(characterByYearCreated.Key);
+//   foreach(var character in characterByYearCreated) {
+//     Console.WriteLine($"\t{character.Name}");
+//   }
+// }
+
+// ********Assignment********
+
+// 1) How many characters created in 1981 (all series)?
+var CharacterCount1981 = characters.Count(c => c.YearCreated == 1981);
+Console.WriteLine($"There are {CharacterCount1981} characters created in 1981");
+
+
+
+
+
