@@ -205,9 +205,14 @@ Console.Clear();
 // }
 
 // 24) How many character(s) in the Mario series are Human species?
-int HumanCount = characters.Where(c => c.Series.Contains("Mario") && c.Species == "Human").Count();
-Console.WriteLine($"There are {HumanCount} characters in the Mario series with the species Human");
+// int HumanCount = characters.Where(c => c.Series.Contains("Mario") && c.Species == "Human").Count();
+// Console.WriteLine($"There are {HumanCount} characters in the Mario series with the species Human");
 
+// 25) List the character(s) in the Mario series that are Human species - return character name only.
+foreach(Character character in characters.Where(c => c.Series.Contains("Mario") && c.Species == "Human"))
+{
+  Console.WriteLine($"{character.Name}");
+}
 
 
 
