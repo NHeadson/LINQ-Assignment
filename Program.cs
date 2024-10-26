@@ -189,10 +189,14 @@ Console.Clear();
 // Console.WriteLine($"Are there any characters with the alias Winter Kong: {WinterKong}");
 
 // 21) List the character(s) that have an alias of Winter Kong - return character name and alias only.
-foreach(Character character in characters.Where(c => c.Alias.Contains("Winter Kong")))
-{
-  Console.WriteLine($"{character.Name} - {string.Join(", ", character.Alias)}");
-}
+// foreach(Character character in characters.Where(c => c.Alias.Contains("Winter Kong")))
+// {
+//   Console.WriteLine($"{character.Name} - {string.Join(", ", character.Alias)}");
+// }
+
+// 22) How many character(s) have a species of Kremling?
+int KremlingCount = characters.Count(c => c.Species == "Kremling");
+Console.WriteLine($"There are {KremlingCount} characters with the species Kremling");
 
 
 
