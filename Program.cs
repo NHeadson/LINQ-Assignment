@@ -127,10 +127,14 @@ Console.Clear();
 // Console.WriteLine($"There were {Dk64Count} characters that made their first appearance in Donkey Kong 64");
 
 // 8) List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
-foreach(Character character in characters.Where(c => c.FirstAppearance == "Donkey Kong 64"))
-{
-  Console.WriteLine($"{character.Name}");
-}
+// foreach(Character character in characters.Where(c => c.FirstAppearance == "Donkey Kong 64"))
+// {
+//   Console.WriteLine($"{character.Name}");
+// }
+
+// 9) Are there any character(s) with no alias (all series)?
+bool NoAlias = characters.Any(c => c.Alias.Count() == 0);
+Console.WriteLine($"Are there any characters with no alias: {NoAlias}");
 
 
 
